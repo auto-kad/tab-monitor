@@ -1,7 +1,7 @@
  function saveOptions() {
     var x = 1000 * document.getElementById("durationValue").value;
     chrome.storage.sync.set({
-        "maxIdleTime" : x
+        'maxIdleTime' : x
     });
 }
 

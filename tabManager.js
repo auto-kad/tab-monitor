@@ -24,7 +24,7 @@
     
 
 
-    chrome.tabs.onCreated.addListener(function () {
+  /*   chrome.tabs.onCreated.addListener(function () {
         console.log(5);
     
         var time;
@@ -76,7 +76,7 @@
             time = setTimeout(testing, 5000);
         }
     
-    });
+    }); */
 
  
 
