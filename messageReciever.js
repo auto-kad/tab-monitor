@@ -3,6 +3,8 @@ chrome.runtime.onMessage.addListener(
             let newParagraphElement = document.createElement("P");
             newParagraphElement.innerText = message.url.toString() + message.date;
             let optionsPageTabEntries = document.getElementById("closedTabsBox");
-            optionsPageTabEntries.appendChild(newParagraphElemen);
+            optionsPageTabEntries.appendChild(newParagraphElement);
+            chrome.tabs.remove(sender.tab.id);
+
         }
     );

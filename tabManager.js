@@ -23,8 +23,7 @@
     
 
 
-  /*   chrome.tabs.onCreated.addListener(function () {
-        console.log(5);
+     chrome.tabs.onCreated.addListener(function () {
     
         var time;
         window.onload = resetTimer;
@@ -44,15 +43,22 @@
 
         }
     
-        function resetTimer() {
+        
+    function resetTimer() {
+       
+        chrome.storage.sync.get(['maxIdleTime'], function (result) {
+            var maxIdleTime = result.maxIdleTime;
+
+            console.log(result);
             clearTimeout(time);
-            time = setTimeout(testing, 5000);
-        }
+            time = setTimeout(testing, maxIdleTime);
+        } );
+        
+    }
     
     });
 
     chrome.tabs.onUpdated.addListener(function () {
-        console.log(5);
     
         var time;
         window.onload = resetTimer;
@@ -70,12 +76,19 @@
 
         }
     
-        function resetTimer() {
+        
+    function resetTimer() {
+        chrome.storage.sync.get(['maxIdleTime'], function (result) {
+            var maxIdleTime = result.maxIdleTime;
+
+            console.log(result);
             clearTimeout(time);
-            time = setTimeout(testing, 5000);
-        }
+            time = setTimeout(testing, maxIdleTime);
+        } );
+        
+    }
     
-    }); */
+    }); 
 
  
 
