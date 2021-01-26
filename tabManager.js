@@ -1,6 +1,5 @@
     
     chrome.storage.onChanged.addListener(function(changes, namespace) {
-        //console.log(999);
 
         chrome.tabs.query({}, function(tabs) {
     

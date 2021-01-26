@@ -1,9 +1,8 @@
 chrome.runtime.onMessage.addListener(
         function(message, sender, sendResponse) {
-            let x = document.createElement("P");
-            x.innerText = message.url.toString() + message.date;
-            //console.log(x);
-            let y = document.getElementById("closedTabsBox");
-            y.appendChild(x);
+            let newParagraphElement = document.createElement("P");
+            newParagraphElement.innerText = message.url.toString() + message.date;
+            let optionsPageTabEntries = document.getElementById("closedTabsBox");
+            optionsPageTabEntries.appendChild(newParagraphElemen);
         }
     );

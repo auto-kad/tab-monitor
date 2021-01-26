@@ -36,5 +36,3 @@
 
 checkInactivityTime();
 
-//console.log(10);
-
